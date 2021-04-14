@@ -1,0 +1,44 @@
+#include <stdio.h>
+struct student{
+        char name;
+        int ID ;
+        int day , month ,year;
+        int score;
+        int num ;
+    };
+    
+int main()
+{ int n=2; int i;
+    struct student student[n];
+    printf("Welcome in this program \n");
+    printf("Please Enter the informations of the students\n");
+    for (int i=1; i<=n; i++)
+    { student[i].num =i;
+     printf("student num[%d]\n" ,student[i].num);
+     
+        printf( "Enter Name: \n");
+        scanf("%s", &student[i].name);
+        
+        printf("Enter ID:\n");
+        scanf("%d", &student[i].ID);
+           
+         printf("Birth date\n");
+         printf("Enter day:\n"); scanf("%d" ,&student[i].day);
+         printf("Enter month:\n"); scanf("%d" ,&student[i].month);
+         printf("Enter year:\n"); scanf("%d" ,&student[i].year);
+         printf("Birth date:%d/%d/%d\n" ,student[i].day,student[i].month,student[i].year);
+         
+         printf("Enter score:\n");
+        scanf("%d",&student[i].score);
+    }
+    printf("checking the information of students\n");
+    printf("Enter the number of student\n");
+    scanf("%d",&i); printf("i=%d\n",i);
+   
+    //printf("student name=  %s\n" ,student[i].name);
+    printf("student id= %d\n",student[i].ID);
+    printf("student score= %d\n",student[i].score);
+    printf( "student birthday=%d/%d/%d",student[i].day,student[i].month,student[i].year);
+
+    return 0;
+}
