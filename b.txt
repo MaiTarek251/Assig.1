@@ -1,0 +1,67 @@
+#include <string.h>
+
+#include <stdio.h>
+struct student{
+        char name[100];
+        int ID ;
+        int day , month ,year;
+        int score;
+        int num ;
+        };
+    
+int main()
+{ int n ,i;
+    struct student student[n];
+    printf("Welcome in this program \n");
+    printf("enter the number of students\n");
+    scanf("%d",&n);
+    printf("Then the number of students is:%d\n",n);putchar('\n');
+    printf("Please Enter the informations of the student\n");
+    for (int i=1; i<=n; i++)
+    { student[i].num =i;
+     printf("student num[%d]\n" ,student[i].num);
+		        
+		printf( "Enter Name: \n");
+	scanf("%s", &student[i].name);	
+	
+	//fflush(stdin);
+    //scanf("%*c");
+   //fgets(student.name, sizeof(student.name),stdin);
+   
+   
+
+	 //  i tried to use these but fail!
+   //getline(&student.name, 100, stdin);
+        //gets(student[i].name[i]);
+      //  for(int k=1;student[i].name[k]!='\0' ;k++)
+    //{ scanf("student name: %s" ,student[i].name[k]);}
+       
+    
+        printf("Enter ID:\n");
+        scanf("%d", &student[i].ID);
+           
+         printf("Birth date\n");
+         printf("Enter day:\n");   scanf("%d" ,&student[i].day);
+         printf("Enter month:\n"); scanf("%d" ,&student[i].month);
+         printf("Enter year:\n");  scanf("%d" ,&student[i].year);
+         printf("Birth date:%d/%d/%d\n" ,student[i].day,student[i].month,student[i].year);
+         printf("Enter score:\n");
+        scanf("%d",&student[i].score);
+    }
+    
+    printf("checking the information of students\n");
+    printf("Enter the number of student\n");
+    scanf("%d",&i); printf("i=%d\n",i);
+   
+    printf("student name=\n");   puts( student[i].name);
+   // printf("student name= %c\n",student[i].name);
+    //I tried to use string also but there is a problem!! 
+    //for(int k=1;student[i].name[k]!='\0' ;k++)
+    //{ printf ("student name: %c" ,student[i].name[k]);}
+    printf("student id= %d\n",student[i].ID);
+    printf("student score= %d\n",student[i].score);
+    printf( "student birthday=%d/%d/%d",student[i].day,student[i].month,student[i].year);
+
+    return 0;
+}
+ 
